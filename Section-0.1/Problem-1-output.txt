@@ -1,0 +1,93 @@
+Test:
+    A = [[1, 2],
+         [3, 4]]
+    B = [[5, 6],
+         [7, 8]]
+
+    multiply(A,B) should be:
+    [[19, 22],
+     [43, 50]]
+
+returned: [[19, 22], [43, 50]]
+
+=== Defintions ===
+
+Real numbers: the values of all possible lengths from the
+    origin of a real number line
+Matrix multiplication is defined by
+
+[a   b]   [p   q]   [ap + br   aq + bs]
+[c   d] x [r   s] = [cp + dr   cq + ds]
+
+
+Let A = the set of 2-by-2 matrixes with real number entries
+Let M =
+  [[1, 1]
+   [0, 1]]
+B = {X in A | MX = XM}
+
+Let X =
+ [[1, 1],
+  [0, 1]]
+MX =
+ [[1, 2],
+  [0, 1]]
+XM =
+ [[1, 2],
+  [0, 1]]
+X is in B:  True because MX = XM
+
+Let X =
+ [[1, 1],
+  [1, 1]]
+MX =
+ [[2, 2],
+  [1, 1]]
+XM =
+ [[1, 2],
+  [1, 2]]
+X is in B:  False because MX != XM
+
+Let X =
+ [[0, 0],
+  [0, 0]]
+MX =
+ [[0, 0],
+  [0, 0]]
+XM =
+ [[0, 0],
+  [0, 0]]
+X is in B:  True because MX = XM
+
+Let X =
+ [[1, 1],
+  [1, 0]]
+MX =
+ [[2, 1],
+  [1, 0]]
+XM =
+ [[1, 2],
+  [1, 1]]
+X is in B:  False because MX != XM
+
+Let X =
+ [[1, 0],
+  [0, 1]]
+MX =
+ [[1, 1],
+  [0, 1]]
+XM =
+ [[1, 1],
+  [0, 1]]
+X is in B:  True because MX = XM
+
+Let X =
+ [[0, 1],
+  [1, 0]]
+MX =
+ [[1, 1],
+  [1, 0]]
+XM =
+ [[0, 1],
+  [1, 1]]
+X is in B:  False because MX != XM
