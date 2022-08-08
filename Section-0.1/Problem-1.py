@@ -30,11 +30,11 @@ def dot(u, v):
     return u0*v0 + u1*v1
 
 def multiply(A, B):
-    e00 = dot(A[0], transpose_column(column(B, 0)))
-    e01 = dot(A[0], transpose_column(column(B, 1)))
-    e10 = dot(A[1], transpose_column(column(B, 0)))
-    e11 = dot(A[1], transpose_column(column(B, 1)))
-    return [[e00, e01], [e10, e11]]
+    a = dot(A[0], transpose_column(column(B, 0)))
+    b = dot(A[0], transpose_column(column(B, 1)))
+    c = dot(A[1], transpose_column(column(B, 0)))
+    d = dot(A[1], transpose_column(column(B, 1)))
+    return make_matrix(a, b, c, d)
 
 def in_B(A):
     return multiply(M,A) == multiply(A,M)
